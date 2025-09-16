@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
         currentInputVector = Vector2.SmoothDamp(currentInputVector, movementAmount, ref smoothInputVelocity, _inertia);
         moveDirection = new Vector2(currentInputVector.x, currentInputVector.y);
 
-        transform.Translate(moveDirection * _speed * Time.deltaTime);
+        if(moveDirection.sqrMagnitude>0.3) transform.Translate(moveDirection * _speed * Time.deltaTime);
         if (moveDirection.y > 0f)
         {
             spriteRenderer.sprite = Ass;
