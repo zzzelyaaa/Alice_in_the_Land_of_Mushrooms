@@ -101,7 +101,7 @@ public class Camera_desh : MonoBehaviour
                 rotationSpeed * Time.deltaTime
             );
         }
-
+        if (currentTargetIndex == pathPoints.Count - 1) reachThreshold = 30f;
         // ѕроверка достижени€ целевой позиции
         if (Vector3.Distance(cameraTransform.position, targetPosition) <= reachThreshold)
         {

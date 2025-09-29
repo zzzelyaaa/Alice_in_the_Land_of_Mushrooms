@@ -59,7 +59,7 @@ public class Task : MonoBehaviour
         {
             fill = 0f;
             time = 0f;
-            WorkComplite();
+            //WorkComplite();
         }
     }
 
